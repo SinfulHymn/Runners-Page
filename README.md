@@ -46,9 +46,7 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-# Current State
-
+# Functionality
 - In this app we will access a database of race events and display them on the index page
 
 - On the index page we have four functionalities
@@ -57,6 +55,8 @@
         - create a new race event 
         - add reviews to races events
         - update race event data and update database
+
+# Current State
 
 - To do this we will be utilizing the strava api app to get user activity data 
     
@@ -98,17 +98,31 @@
 
 # User Story
 
-- You just finished your marathon, run, or any activity and imported your data on strava. 
-- now you want to see your data on a page 
-- you click my Athelets views and authorize Atheletes view to connect to strave
-- once that authorization is done your activity data propagates on the page
+- As a user, I should be able to see directory of Running Races/Events on Index 
+- As a user, I should be able to click any of the featured Race for their full description/data on index page
+- As a user, I should be able to navigate the navigation links to sort events by race type on index and Results/filtered
+- As a user, On the Results/filtered page I should be able to see a directory of event filtered by event type
+- As a user, I should be able to click on any Race/Event to see their complete data on the Results/Filtered page
+- As a user, On the show page I should be able to see all an Events data
+- As a user, On the show page I should be able to update the event data
+- As a user, On the show page I should be able add a review for the event
+- As a user, I could contribute to the database of events by creating another race event on the database on the head of the page
+- As a user, I should be able to log in  on the header and view and edit my reviews
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
- # Technologies used 
- - OAuth2 for authorization and token refresh
- - Javascript
- - HTML
- - CSS
+# Technologies used 
+
+* HTML
+* CSS
+* JavaScript/jQuery
+* Node.js
+* MongoDB
+* Mongoose
+* Express
+* EJS
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
  # API's used
