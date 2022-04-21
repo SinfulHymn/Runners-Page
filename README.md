@@ -58,7 +58,7 @@
 
 # Current State
 
-- To do this we will be utilizing the strava api app to get user activity data 
+<!-- - To do this we will be utilizing the strava api app to get user activity data 
     
 - hardships of api oauth2 authentication code and authorizations, tokens and token refresh
     - I have to generate authorization code from an oauth2 authorization page
@@ -71,29 +71,23 @@
 - user will be able to see their average data points and highest data point
     - avg hr, avg pace, avg run, best miles, longest milage, 
 
-- Atheletes need an easy to access website to view their atheletic activities across different plateforms and their visualization.
+- Atheletes need an easy to access website to view their atheletic activities across different plateforms and their visualization. -->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 
- # Technologies used 
- - OAuth2 for authorization and token refresh
- - Javascript
- - HTML
- - CSS
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 # Roadmap and future Implementations
 
-- add authorization page so the user could import their peronal data on to the page
+<!-- - add authorization page so the user could import their peronal data on to the page
 - add poly line to all user activities
 - Create a roadmap of all the miles onto the map.
     - When user hovers/clicks a mile or activity it will highlight and zoom onto location on map
 - add more data points from different apps
 - change user interface.
 - In progress: users will be able to login and authorize strava to allow me to use and propagated their own use data
-- add more map styling and interactiveness
+- add more map styling and interactiveness -->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # User Story
@@ -113,20 +107,20 @@
 
 # Technologies used 
 
-* HTML
-* CSS
-* JavaScript/jQuery
-* Node.js
-* MongoDB
-* Mongoose
-* Express
-* EJS
+- HTML
+- CSS
+- JavaScript/jQuery
+- Node.js
+- MongoDB
+- Mongoose
+- Express
+- EJS
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
  # API's used
- - **[Strava API](https://developers.strava.com/)**.
+ <!-- - **[Strava API](https://developers.strava.com/)**. -->
  - **[Leaflet API](https://leafletjs.com/SlavaUkraini/)**.
  - **[mapbox API](https://leafletjs.com/SlavaUkraini/)**.
 <p align="right">(<a href="#top">back to top</a>)</p>
