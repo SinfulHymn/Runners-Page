@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Kmachappy/Runners-Page">
-    <img src="https://i.imgur.com/ys3rd2e.png" alt="Logo" width="180" height="100">
+    <img src="https://i.imgur.com/ys3rd2e.png" alt="Logo" width="250" height="150">
   </a>
 
 <h3 align="center">Runners Page</h3>
