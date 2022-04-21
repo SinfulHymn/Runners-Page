@@ -80,8 +80,7 @@
  - Javascript
  - HTML
  - CSS
- 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 # Roadmap and future Implementations
 
@@ -93,7 +92,7 @@
 - change user interface.
 - In progress: users will be able to login and authorize strava to allow me to use and propagated their own use data
 - add more map styling and interactiveness
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 # User Story
 
@@ -101,18 +100,20 @@
 - now you want to see your data on a page 
 - you click my Athelets views and authorize Atheletes view to connect to strave
 - once that authorization is done your activity data propagates on the page
-- 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
  # Technologies used 
  - OAuth2 for authorization and token refresh
  - Javascript
  - HTML
  - CSS
+<p align="right">(<a href="#top">back to top</a>)</p>
 
  # API's used
  - **[Strava API](https://developers.strava.com/)**.
  - **[Leaflet API](https://leafletjs.com/SlavaUkraini/)**.
  - **[mapbox API](https://leafletjs.com/SlavaUkraini/)**.
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 # Runers Page WireFrame and ERD
 
@@ -134,6 +135,7 @@
         <img src="https://i.imgur.com/0At4nOQ.png" alt="wireframe-results" width="450" height="350">
     </a>
 </div>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 # Resources/Links
@@ -141,4 +143,4 @@
 - https://developers.strava.com/docs/getting-started/
 - https://leafletjs.com/SlavaUkraini/reference.html
 - https://www.strava.com/oauth/authorize?client_id=80013&redirect_uri=http://localhost&response_type=code&scope=activity:read_all
-
+<p align="right">(<a href="#top">back to top</a>)</p>
