@@ -5,8 +5,10 @@
     <img src="https://i.imgur.com/ys3rd2e.png" alt="Logo" width="250" height="150">
   </a>
 
+<a href="https://github.com/Kmachappy/Runners-Page">
 <h3 align="center">Runners Page</h3>
-  
+</a> 
+
   <p align="center">
     <p>Another Race Events Page</p>
 	A Cloud Database of Running based Races and Events!<br />
@@ -116,6 +118,14 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Runers Page WireFrame and ERD
+
+Index/Home             |  Results/Filtered
+:-------------------------:|:-------------------------:
+![](https://i.imgur.com/CtaWKbU.png)  |  ![](https://i.imgur.com/0fxtC01.png)
+
+Show/Description             |  ERD
+:-------------------------:|:-------------------------:
+![](https://i.imgur.com/0At4nOQ.png)  |  ![](https://i.imgur.com/Y4mWTw2.png)
 
 <div align="left">
     <a href="https://wireframe.cc/8vk54U">
