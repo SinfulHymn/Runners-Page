@@ -127,24 +127,6 @@ Show/Description             |  ERD
 :-------------------------:|:-------------------------:
 ![](https://i.imgur.com/0At4nOQ.png)  |  ![](https://i.imgur.com/Y4mWTw2.png)
 
-<div align="left">
-    <a href="https://wireframe.cc/8vk54U">
-        <img src="https://i.imgur.com/CtaWKbU.png" alt="wireframe-index" width="450" height="350">
-    </a>
-    <a href="https://wireframe.cc/QAQ0yB">
-        <img src="https://i.imgur.com/0fxtC01.png" alt="wireframe-results" width="450" height="350">
-    </a>
-</div>
-
-
-<div align="left">
-    <a href="https://wireframe.cc/lcnUU1">
-        <img src="https://i.imgur.com/Y4mWTw2.png" alt="wireframe-results" width="450" height="350">
-    </a>
-    <a href="https://wireframe.cc/lcnUU1">
-        <img src="https://i.imgur.com/0At4nOQ.png" alt="wireframe-results" width="450" height="350">
-    </a>
-</div>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
