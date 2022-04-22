@@ -24,27 +24,11 @@
 </div>
 
 # About
-Index/Home             |  Results/Filtered
+Description            |  Screenshot
 :---:|:----:
-| <p>- Athelets today do not have a centralized site to view their Atheletic activities from runs, cycling and swimming. Today Atheletes depend on their phone to view their activities, that are tracked by a plethora of activity-tracking apps such as Strava, Nike - Run Club, Asics - RunKeeper, UnderArmor - Map my Run, AllTrails, ect.</p> | ![](https://i.imgur.com/CtaWKbU.png) | 
+| <p align="left">- A Cloud base</p> | ![](https://i.imgur.com/CtaWKbU.png) | 
 
-<div style="display:flex;">
-    <div align="left" style="width:50%;border: 1px solid #333744 ;">
-        <div style="margin:5px">
-        <h2> Description, Goals, and what this tried to Acheive</h2>
-        <p>- Athelets today do not have a centralized site to view their Atheletic activities from runs, cycling and swimming. Today Atheletes depend on their phone to view their activities, that are tracked by a plethora of activity-tracking apps such as Strava, Nike - Run Club, Asics - RunKeeper, UnderArmor - Map my Run, AllTrails, ect.</p>
-        <p>- Athelets today do not have a centralized site to view their Atheletic activities from runs, cycling and swimming. Today Atheletes depend on their phone to view their activities, that are tracked by a plethora of activity-tracking apps such as Strava, Nike - Run Club, Asics - RunKeeper, UnderArmor - Map my Run, AllTrails, ect.</p>
-        </div>
-    </div>
-    <div align="right" Style="flex-grow:1;border: 2px solid #333744;width:50%">
-        <div style="margin:5px">
-        <h2>Screenshot</h2>
-        <a href="https://i.imgur.com/CtaWKbU.png">
-            <img  src="https://i.imgur.com/CtaWKbU.png" alt="Logo" width="80%" height="360px">
-        </a>
-        </div>
-    </div>
-</div>
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
