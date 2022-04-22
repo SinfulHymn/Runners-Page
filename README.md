@@ -44,6 +44,40 @@ Description            |  Screenshot
         - add reviews to races events
         - update race event data and update database
 
+# Intended Routes
+```
+
+```
+
+# Models/Schema 
+### subject to change
+```
+Race/Event Schema:
+const raceSchema = new Schema({
+    name: { type: String, required: true, unique:true},
+    description: { type: String, required: false},
+    image: { type: String, required: true},
+    price: { type: String, required: false},
+    location: { type: String, required: false},
+    type: { type: String, required: true },
+    urlSource: { type: String, required: true}
+})
+```
+User Schema:
+```
+const userSchema = new Schema({
+    username: { type: String, required: true, unique:true},
+    password: {type: String, required: true }
+})
+```
+Review Schema:
+```
+const reviewSchema = new Schema({
+    content: { type: String, required: true},
+    rating: { type: number, required: true}
+})
+```
+
 # Current State
 
 <!-- - To do this we will be utilizing the strava api app to get user activity data 
