@@ -11,7 +11,7 @@
 
   <p align="center">
     <p>Another Race Events Page</p>
-	A Cloud Database of Running based Races and Events!<br />
+	A Cloud Database of Running based Races/Events!<br />
     <a href="https://github.com/Kmachappy/Runners-Page"><strong>Live Website - Runners Page</strong></a>
     <br />
 	CRUD Web Application built on <br/>
@@ -26,7 +26,8 @@
 # About
 Description            |  Screenshot
 :---:|:----:
-| <p align="left">- A Cloud base</p> | ![](https://i.imgur.com/CtaWKbU.png) | 
+| <p align="left">- A cloud based web application that displays a directory of Running based Races/Events. <br> - Users will be able to explore Races/Events and view all their details about the Event! <br> - Users can leave a review on Races/Events they have participated in! <br>- Users are also encouraged to contribute by updating outdated Race/Event Data or adding new Race/Event's to the database as well. <br></p> | ![](https://i.imgur.com/CtaWKbU.png) | 
+
 
 
 
