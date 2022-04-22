@@ -24,6 +24,9 @@
 </div>
 
 # About
+Index/Home             |  Results/Filtered
+:---:|:----:
+| <p>- Athelets today do not have a centralized site to view their Atheletic activities from runs, cycling and swimming. Today Atheletes depend on their phone to view their activities, that are tracked by a plethora of activity-tracking apps such as Strava, Nike - Run Club, Asics - RunKeeper, UnderArmor - Map my Run, AllTrails, ect.</p> | ![](https://i.imgur.com/CtaWKbU.png) | 
 
 <div style="display:flex;">
     <div align="left" style="width:50%;border: 1px solid #333744 ;">
