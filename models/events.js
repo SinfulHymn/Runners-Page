@@ -12,7 +12,5 @@ const eventsSchema = new Schema({
     image: {type: String, required: true},
     source: {type: String, required: true},
     signup: {type: String, required: true},
-    price: {type: String, rquired: true},
-    latlang: {type: String, required: true}
-
+    price: {type: String, required: true},
 })
