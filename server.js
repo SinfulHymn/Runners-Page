@@ -1,13 +1,15 @@
 // imports
 require("dotenv").config()
 const express = require("express");
-const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan")
-const raceRouter = require("./controllers/race")
 const PORT = process.env.PORT
 const dbURL = process.env.MONGO_URL
+const eventRouter = require("./controllers/events")
+
+// express app
+const app = express();
 
 
 // middleware
@@ -17,19 +19,9 @@ app.use(methodOverride("_method"))
 app.use(morgan("tiny"))
 
 // routes
-app.use(raceRouter)
+app.use(eventRouter)
 
-// database connect
-mongoose.connect(dbURL,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}, ()=>{})
 
-// database event listeners
-const db = mongoose.connection
-db.on("error", err => console.log(`error\n${err.message}`))
-db.on("connected", ()=> console.log("Mongo DB Connected"))
-db.on("disconnected", ()=> console.log("Mongo DB Disconnected"))
 
 // listener
 
