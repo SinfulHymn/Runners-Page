@@ -5,7 +5,7 @@ const methodOverride = require("method-override");
 const morgan = require("morgan")
 
 //router
-const eventRouter = require("./controllers/eventsControllers")
+const indexRouter = require("./routes/index.js")
 
 // express app
 const app = express();
@@ -18,7 +18,7 @@ app.use(methodOverride("_method"))
 app.use(morgan("dev"))
 
 // routes
-app.use(eventRouter)
+app.use(indexRouter)
 
 
 

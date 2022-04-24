@@ -14,3 +14,8 @@ const eventsSchema = new Schema({
     signup: {type: String, required: true},
     price: {type: String, required: true},
 })
+
+const Event = mongoose.model("Event", eventsSchema)
+
+//export model
+module.exports = Event

@@ -3,6 +3,18 @@
 <!-- head -->
 <%- include("./partials/head.ejs") %> 
 <body>
-    <h1>Race Page</h1>
+    <main>
+        <%- include("./partials/header.ejs") %> 
+        <h1>Race Page</h1>
+
+        <% events.forEach((event)=>{ %>
+ 
+                 <div>
+                    <!-- <img src="<%=event.image%> " alt=""> -->
+                 </div>   
+             
+    
+        <%}) %> 
+    </main>
 </body>
 </html>
