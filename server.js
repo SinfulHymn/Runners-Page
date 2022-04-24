@@ -1,11 +1,11 @@
 // imports
 require("dotenv").config()
 const express = require("express");
-// const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan")
 
-const eventRouter = require("./controllers/events")
+//router
+const eventRouter = require("./controllers/eventsControllers")
 
 // express app
 const app = express();
