@@ -4,10 +4,15 @@ require("dotenv").config()
 const express = require("express");
 const methodOverride = require("method-override");
 const morgan = require("morgan")
+const session = express("express-session")
+const passport = require("passport")
 const PORT = process.env.PORT || 3054
 
 // express app
 const app = express();
+
+
+// !!!!!!!! attention this may need to change
 // connect to the MongoDB with mongoose
 const mongoose = require("./config/database")
 
@@ -22,7 +27,14 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
 app.use(morgan("dev"))
-// add session middleware here
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+
 
 // add passport middleware here
 
