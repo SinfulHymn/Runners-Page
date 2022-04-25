@@ -7,7 +7,7 @@ const userSchema = new Schema({
     email: String,
     avatarURL: String,
     googleId: String,
-    ratedIceCreams: [{
+    reviewedEvents: [{
         type: Schema.Types.ObjectId,
         ref: 'Event'
     }]

@@ -1,27 +1,30 @@
 // import schema model
-const Event = require("../models/events")
-const eventsSeed = require("../models/eventsSeed")
+const Event = require("../models/events");
+const eventsSeed = require("../models/eventsSeed");
 
-const actions = {}
+const actions = {};
 
 
 actions.index = (req,res)=>{
     Event.find({}, (err,events)=>{
-        res.render("index.ejs",{events});
-    })
-}
+        res.render("index.ejs",{
+            events,
+            user: req.user
+        });
+    });
+};
 
 actions.seed = (req,res)=>{
     Event.deleteMany({},(err,events)=>{
         Event.create(eventsSeed,(err,data)=>{
-            res.redirect("/")
-        })
-    })   
-}
+            res.redirect("/");
+        });
+    });   
+};
 
 
 actions.new = (req,res)=>{
-    res.render("new.ejs")
+    res.render("new.ejs");
 }
 
 

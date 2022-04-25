@@ -1,9 +1,8 @@
 // connect to the MongoDB with mongoose
-const mongoose = require("../config/database")
+// const mongoose = require("../config/database")
+const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
-
-
 
 const reviewSchema = new Schema({
     content: String,
@@ -33,7 +32,7 @@ const eventsSchema = new Schema({
     source: {type: String, required: true},
     signup: {type: String, required: true},
     price: {type: String, required: true},
-    revies: [reviewSchema]
+    reviews: [reviewSchema]
 })
 
 // const Event = mongoose.model("Event", eventsSchema)

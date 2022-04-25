@@ -1,48 +1,53 @@
 // read env variables
-require("dotenv").config()
+require("dotenv").config();
 // imports
 const express = require("express");
+const morgan = require("morgan");
+// fucking typos man...
+const session = require("express-session");
+const passport = require("passport");
 const methodOverride = require("method-override");
-const morgan = require("morgan")
-const session = express("express-session")
-const passport = require("passport")
-const PORT = process.env.PORT || 3054
+const PORT = process.env.PORT || "3060";
 
 // express app
 const app = express();
 
-
 // !!!!!!!! attention this may need to change
 // connect to the MongoDB with mongoose
-const mongoose = require("./config/database")
+// by simply running the code inside of ./config/database
+require("./config/database");
+// initialize oauth process for login requests by simply tunning the code
+require("./config/passport");
 
 // require routes
-const indexRouter = require("./routes/index.js")
+const indexRouter = require("./routes/index.js");
 
 // view engine
-app.set('view engine', 'ejs')
+// app.set('view engine', 'ejs')
 
 // middleware
-app.use(express.urlencoded({extended: true}))
-app.use(express.static("public"))
-app.use(methodOverride("_method"))
-app.use(morgan("dev"))
+app.use(express.urlencoded({extended: true}));
+app.use(express.static("public"));
+app.use(methodOverride("_method"));
+app.use(morgan("dev"));
+// app.use(express.json());
+
+// !!!! this is cause the crash I don't know how.
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true
-}))
-app.use(passport.initialize())
-app.use(passport.session())
-
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // add passport middleware here
 
 
 
 // use routes
-app.use('/',indexRouter)
+app.use('/',indexRouter);
 
 
 // listener
-app.listen(PORT, ()=> console.log(`We are listening on ${PORT}`)) 
+app.listen(PORT, ()=> console.log(`We are listening on ${PORT}`))
