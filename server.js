@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3054
 
 // express app
 const app = express();
+// connect to the MongoDB with mongoose
+const mongoose = require("./config/database")
 
 // require routes
 const indexRouter = require("./routes/index.js")
@@ -20,6 +22,9 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
 app.use(morgan("dev"))
+// add session middleware here
+
+// add passport middleware here
 
 
 
