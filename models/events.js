@@ -1,7 +1,27 @@
-// import connection
+// connect to the MongoDB with mongoose
 const mongoose = require("../config/database")
 
 const Schema = mongoose.Schema
+
+
+
+const reviewSchema = new Schema({
+    content: String,
+    rating: {
+        type: Number, 
+        min: 1,
+        max: 5,
+        default: 5,
+        required: true,
+    },
+    reviewedBy:{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
+
+},{
+    timestamps: true
+})
 
 //schema
 const eventsSchema = new Schema({
@@ -13,9 +33,10 @@ const eventsSchema = new Schema({
     source: {type: String, required: true},
     signup: {type: String, required: true},
     price: {type: String, required: true},
+    revies: [reviewSchema]
 })
 
-const Event = mongoose.model("Event", eventsSchema)
+// const Event = mongoose.model("Event", eventsSchema)
 
 //export model
-module.exports = Event
+module.exports = mongoose.model("Event", eventsSchema)
