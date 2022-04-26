@@ -20,9 +20,23 @@
     
           </div>
         </div>
-        <div class="parallax"><img id="banner" src="/images/banner5.jpg" alt="banner"></div>
+        <div class="parallax"><img id="banner" src="/static/images/banner5.jpg" alt="banner"></div>
       </div>
      <br>
      <br>
+ 
+      <h4><%=event.name %> </h4>
+      <img src="<%=event.image %> " alt="">
+      <p><%=event.description %> </p>
+
+      <% if(user){ %>
+        <form action="/show/<%=event._id%>?_method=DELETE" method="POST">
+          <input class="delete-btn" type="submit" value="DELETE" />
+        </form>
+        <a href="/edit/<%=event._id%>">Edit this product</a>
+      <%} else{%> 
+      
+        <a href="/auth/google"><i class=" material-icons left">vpn_key</i>Log in With Google</a>
+      <% } %> 
 </body>
 </html>

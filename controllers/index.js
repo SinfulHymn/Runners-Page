@@ -29,6 +29,40 @@ actions.newget = (req,res)=>{
     });
 }
 
+// get show
+actions.showget = (req,res)=>{
+    Event.findById(req.params.id, (err,event)=>{
+        res.render("show.ejs",{
+            event,
+            user:req.user
+        })
+    })
+}
+// post create
+actions.createpost = (req,res)=>{
+    console.log(req.body)
+    Event.create(req.body, (err,createdEvent)=>{
+        if(err) return res.send(err)
+        res.redirect("/")
+    })
+}
+
+// delete method delete
+actions.delete = (req,res)=>{
+    Event.findByIdAndDelete(req.params.id, (err,deletedEvent)=>{
+        res.redirect("/")
+    })
+}
+
+// edit get
+actions.editget =(req,res)=>{
+    Event.findById(req.params.id,(err,event)=>{
+        res.render("edit.ejs",{
+            event,
+            user:req.user
+        })
+    })
+} 
 
 
 module.exports = actions

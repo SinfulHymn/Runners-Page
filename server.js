@@ -29,7 +29,7 @@ const indexRouter = require("./routes/index.js");
 
 // middleware
 app.use(express.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use('/static',express.static("public"));
 app.use(methodOverride("_method"));
 app.use(morgan("dev"));
 // app.use(express.json());

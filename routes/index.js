@@ -2,17 +2,22 @@ const express = require("express");
 const router = express.Router()
 const passport = require('passport')
 const indexAction = require("../controllers/index.js")
+const Event = require("../models/events");
 
 // index 
-router.get("/", indexAction.indexget)
+router.get("/", indexAction.indexget);
 // seed
-router.get("/seed", indexAction.seedget)
+router.get("/seed", indexAction.seedget);
 // new 
-router.get("/new",indexAction.newget)
+router.get("/new",indexAction.newget);
 // show
-// router.get()
-
-
+router.get("/show/:id",indexAction.showget)
+// create
+router.post("/",indexAction.createpost)
+// delete
+router.delete('/show/:id',indexAction.delete)
+// edit
+router.get('/edit/:id',indexAction.editget)
 
 // login route
 router.get("/auth/google", passport.authenticate('google',{
