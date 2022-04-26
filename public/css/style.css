@@ -67,3 +67,11 @@ footer.page-footer {
   width: 100%;
   height: auto;
 }
+#map {
+  height: 500px;
+}
+input[type="checkbox"].leaflet-control-layers-selector {
+  position: inherit;
+  left: inherit;
+  opacity: inherit;
+}

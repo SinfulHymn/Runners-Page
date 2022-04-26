@@ -4,6 +4,11 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
+const latlngSchema = new Schema([{
+    lat: String,
+    lng: String
+}])
+
 const reviewSchema = new Schema({
     content: String,
     rating: {
@@ -32,6 +37,8 @@ const eventsSchema = new Schema({
     source: {type: String, required: true},
     signup: {type: String, required: true},
     price: {type: String, required: true},
+    latlng: [],
+    tags:[],
     reviews: [reviewSchema]
 })
 

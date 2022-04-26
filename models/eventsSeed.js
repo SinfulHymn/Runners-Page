@@ -8,7 +8,7 @@ module.exports = [
         source: "https://www.lamarathon.com/pages/la-marathon",
         signup: "https://endurancecui.active.com/new/events/81075432/select-race?error=login_required&state=eb8c8dd2-822c-4365-a09b-662d4e46a267&_p=4936230039661593",    
         price: "169.00",
-        latlng: ["34.074019830917145", "-118.23988319943354"],
+        latlng: [34.074019830917145, -118.23988319943354],
         tags: ["Full","Half","5k"]
     },
     {
@@ -20,7 +20,7 @@ module.exports = [
         source: "https://ocmarathon.com/",
         signup: "https://wdc.rccal.com/racecentralpublic/main.cfm/ocmarathon2022/BA9A56CE0A9BFA26E8ED9E10B2CC8F46/?do=userform&f=1",    
         price: "145.00",
-        latlng: ["33.616392209118345", "-117.88166234875722"],
+        latlng: [33.616392209118345, -117.88166234875722],
         tags: ["Full","Half","5k"]
     },
     {
@@ -32,7 +32,7 @@ module.exports = [
         source: "https://www.runlongbeach.com/",
         signup: "https://endurancecui.active.com/new/events/76376032/select-race?error=login_required&state=7eaca70f-b6c2-4e4c-ada0-b019e7ebeda1&_p=6172847620703998",    
         price: "129.00",
-        latlng: ["33.76322418344942", "-118.19814027245643"],
+        latlng: [33.76322418344942, -118.19814027245643],
         tags: ["Full","Half","5k"]
     },
     {
@@ -44,7 +44,7 @@ module.exports = [
         source: "https://www.runrocknroll.com/san-diego",
         signup: "https://endurancecui.active.com/new/events/78852131/select-race?error=login_required&state=656a2ed4-ad2f-4f37-b239-7702406a19d0&_p=6678980437470509",    
         price: "129.00",
-        latlng: ["32.73681829998196", "-117.15946534549002"],
+        latlng: [32.73681829998196, -117.15946534549002],
         tags: ["Full","Half","5k"]
     },
     {
@@ -56,7 +56,7 @@ module.exports = [
         source: "https://inmotionevents.com/event/carlsbad-marathon/",
         signup: "https://events.com/r/en_US/registration/2023-carlsbad-marathon-half-marathon-double-down--5k-carlsbad-january-826279",    
         price: "119.00",
-        latlng: ["33.17075030082306", "-117.34855187581299"],
+        latlng: [33.17075030082306, -117.34855187581299],
         tags: ["Full","Half","5k"]
     },
     {
@@ -68,7 +68,7 @@ module.exports = [
         source: "https://scmarathon.org/",
         signup: "https://endurancecui.active.com/new/error?error=login_required&state=734dbbda-2feb-45e3-8c3d-ae8b59f89f36&_p=5198084639339658",    
         price: "129.00",
-        latlng: ["0", "0"],
+        latlng: [34.41579518574718, -118.55728115882579],
         tags: ["Full","Half","5k"]
     },
     {
@@ -80,7 +80,7 @@ module.exports = [
         source: "https://camarillomarathon.com/",
         signup: "https://www.letsdothis.com/us/e/camarillo-marathon-half-marathon-10k-5k-71063",    
         price: "140.00",
-        latlng: ["0", "0"],
+        latlng: [34.21501099816123, -119.02703013491711],
         tags: ["Full","Half","5k"]
     },
     {
@@ -92,7 +92,7 @@ module.exports = [
         source: "http://venturamarathon.com/",
         signup: "https://runsignup.com/Race/CA/Ventura/VenturaMarathon",    
         price: "129.00",
-        latlng: ["0", "0"],
+        latlng: [34.4514847277444, -119.19731500194324],
         tags: ["Full","Half","5k"]
     },
     {
@@ -104,7 +104,7 @@ module.exports = [
         source: "https://mountains2beachmarathon.com/",
         signup: "https://runsignup.com/Race/Register/?raceId=4487",    
         price: "159.00",
-        latlng: ["0", "0"],
+        latlng: [34.44791522704086, -119.24323095683108],
         tags: ["Full","Half","5k"]
     },
     {
@@ -116,7 +116,7 @@ module.exports = [
         source: "https://www.runrevel.com/rbb",
         signup: "https://www.runrevel.com/rbb/register",    
         price: "119.99",
-        latlng: ["0", "0"],
+        latlng: [34.17382974418123, -116.8553691871909],
         tags: ["Full","Half","5k"]
     },
     {
@@ -128,7 +128,7 @@ module.exports = [
         source: "https://www.runsurfcity.com/",
         signup: "https://endurancecui.active.com/new/events/80512134/select-race?error=login_required&state=758bf2bb-ffd0-4739-8387-1a5c073d7029&_p=5227571909992191",    
         price: "99.00",
-        latlng: ["0", "0"],
+        latlng: [33.65532237770226, -118.00405117318637],
         tags: ["Full","Half","5k"]
     },
     {
@@ -140,7 +140,7 @@ module.exports = [
         source: "https://griffithparkmarathonrelay.com/",
         signup: "https://runsignup.com/Race/CA/LosAngeles/GriffithParkTrailMarathonRelay8K",    
         price: "289.00",
-        latlng: ["0", "0"],
+        latlng: [34.13288541365393, -118.28095730692849],
         tags: ["Full","Half","5k"]
     },
     {
@@ -152,7 +152,7 @@ module.exports = [
         source: "https://www.catalinaislandmarathon.com/",
         signup: "https://www.catalinaislandmarathon.com/Race/Register/?raceId=73049",    
         price: "150.00",
-        latlng: ["0", "0"],
+        latlng: [33.44067960266768, -118.4984587785518],
         tags: ["Full","Half","5k"]
     },
     {
@@ -164,7 +164,7 @@ module.exports = [
         source: "https://seasidemarathon.com/",
         signup: "https://secure.elitesportsca.com/event/seaside-marathon-ca-2022",    
         price: "95.99",
-        latlng: ["0", "0"],
+        latlng: [34.293462288938535, -119.33903739733483],
         tags: ["Full","Half","5k"]
     },
     {
@@ -176,7 +176,7 @@ module.exports = [
         source: "https://runsignup.com/Race/CA/Fresno/TwoCitiesMarathonandHalf",
         signup: "https://runsignup.com/Race/Register/?raceId=27723&eventId=567213",    
         price: "95.00",
-        latlng: ["0", "0"],
+        latlng: [36.88118866150618, -119.7475680577764],
         tags: ["Full","Half","5k"]
     },
     {
@@ -188,7 +188,7 @@ module.exports = [
         source: "https://raceroster.com/events/2022/48081/2022-golden-gate-headlands-marathon-half-marathon-and-10k?aff=FZ4HS",
         signup: "https://raceroster.com/events/2022/48081/2022-golden-gate-headlands-marathon-half-marathon-and-10k?aff=FZ4HS",    
         price: "120.00",
-        latlng: ["0", "0"],
+        latlng: [37.85106380452995, -122.51904815508124],
         tags: ["Full","Half","5k"]
     },
     {
@@ -200,7 +200,7 @@ module.exports = [
         source: "http://www.coastaltrailruns.com/slr_san_lorenzo_river.html",
         signup: "https://runsignup.com/Race/CA/SantaCruz/SanLorenzoRiverTrailRun",    
         price: "70.00",
-        latlng: ["0", "0"],
+        latlng: [36.983680563663206, -122.03809591359374],
         tags: ["Full","Half","5k"]
     },
     {
@@ -212,19 +212,18 @@ module.exports = [
         source: "https://runsignup.com/Race/CA/CastroValley/LakeChabotTrailChallenge?aflt_token=EZnEDCiIAbEP0IXNk3reBNJGJev1hmeL",
         signup: "https://runsignup.com/Race/Register/?raceId=21928&eventId=555254",    
         price: "55.00",
-        latlng: ["0", "0"],
+        latlng: [37.71553113574117, -122.10251356198678],
         tags: ["Full","Half","5k"]
     },
     {
         name: "San Francisco Marathon",
-        description: "The San Francisco Marathon has something for everyone. Runners can participate in the full marathon route, or choose to run the first half marathon (which covers the first part of the full marathon course) or the 2nd half marathon (which covers the second part of the full marathon route). There is also a 5K available to runners who don't want to commit to the marathon or half marathon distance, or an ultra distance race if the full marathon isn't enough for you.",
-        location: "San Francisco, CA",
-        date: "July 24, 2022",
+        description: "Welcome to Speed City, USA! Nicknamed after the legendary San Jose State track teams of the 60s, San Jose is all about speed. United Airlines Rock ‘n’ Roll San Jose is no different. Run at PR-setting speed on a course that’s bursting with San Jose spirit and loved by the world’s best elites. Live-bands, DJs, cheer squads and fans jam the streets of downtown San Jose from start to finish, making this one of the most spirited running block parties you can find!",
+        date: "october 9, 2022",
         image: "http://nk52l3tul6x3a6ogk25ywu4j.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/TSFM_2015_MBP_JPG-90DPI-59-1024x683.jpg",
-        source: "https://www.thesfmarathon.com/",
-        signup: "https://tsfm2022.rccal.com/Reg/Step1?_ga=2.128360840.526403880.1636820273-2097155045.1630351672",    
-        price: "180.00",
-        latlng: ["", ""],
+        source: "https://www.runrocknroll.com/san-jose",
+        signup: "https://endurancecui.active.com/new/events/78132533/select-race?error=login_required&state=c6ad97ed-a086-42c5-a1b8-ccbcf1cc28c3&_p=26292853548180284",    
+        price: "99.00",
+        latlng: [37.79031288981025, -122.38915662219766],
         tags: ["Full","Half","5k"]
     },
     {
@@ -236,10 +235,35 @@ module.exports = [
         source: "https://santarosamarathon.com/",
         signup: "https://venturesendurance.enmotive.com/events/register/2022-santa-rosa-marathon",    
         price: "180.00",
-        latlng: ["0", "0"],
+        latlng: [38.4364370166969, -122.71350628657869],
+        tags: ["Full","Half","5k"]
+    },
+    {
+        name: "Rock n Roll San Jose",
+        description: "The Santa Rosa Marathon returns August 27-28, 2022, for another spectacular weekend running through the heart of California wine country. Treat yourself to scenic miles through dazzling vineyards and scenic pastoral beauty along mostly flat courses in beautiful Sonoma County. Whether you run the 5K, 10K, half marathon, or marathon, we’ll be joining you at the finish for an after-party with a complementary beer (if 21+) at Old Courthouse Square in downtown Santa Rosa. Plus, all marathon and half marathon finishers will take home a bottle of wine from Deloach Vineyards. ",
+        location: "Santa Rosa, CA",
+        date: "August 28, 2022",
+        image: "https://imengine.prod.srp.navigacloud.com/?uuid=9951CD40-FFB5-4C2D-AE16-B268BD6A267F&type=primary&q=72&width=1024",
+        source: "https://santarosamarathon.com/",
+        signup: "https://venturesendurance.enmotive.com/events/register/2022-santa-rosa-marathon",    
+        price: "180.00",
+        latlng: [37.33299864123373, -121.88543318607992],
+        tags: ["Full","Half","5k"]
+    },
+    {
+        name: "Rock n Roll San Jose",
+        description: "The Santa Rosa Marathon returns August 27-28, 2022, for another spectacular weekend running through the heart of California wine country. Treat yourself to scenic miles through dazzling vineyards and scenic pastoral beauty along mostly flat courses in beautiful Sonoma County. Whether you run the 5K, 10K, half marathon, or marathon, we’ll be joining you at the finish for an after-party with a complementary beer (if 21+) at Old Courthouse Square in downtown Santa Rosa. Plus, all marathon and half marathon finishers will take home a bottle of wine from Deloach Vineyards. ",
+        location: "Santa Rosa, CA",
+        date: "August 28, 2022",
+        image: "https://imengine.prod.srp.navigacloud.com/?uuid=9951CD40-FFB5-4C2D-AE16-B268BD6A267F&type=primary&q=72&width=1024",
+        source: "https://santarosamarathon.com/",
+        signup: "https://venturesendurance.enmotive.com/events/register/2022-santa-rosa-marathon",    
+        price: "180.00",
+        latlng: [37.33299864123373, -121.88543318607992],
         tags: ["Full","Half","5k"]
     },
     
+
     
 
 ]
