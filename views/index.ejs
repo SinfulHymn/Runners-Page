@@ -24,62 +24,33 @@
       </div>
      <br>
      <br>
-
-     
-        <% events.forEach((event)=>{ %>
-          <!-- <div class="row">
-            <div class="col s3">
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12 m7"> -->
-
-              <div class="card">
-                <div class="card-image">
-                  <a href="/show/<%=event._id%>">
-                    <img src="<%=event.image %> ">
-                  </a>
-                </div>
-                <div class="card-content">
-                  <span class="card-title"><%=event.name%> </span>
-                  
-                  <div class="right-align light"><%=event.location%></div>
-                  <div class="right-align light">Date: <%=event.date %></div>
-                  
-                  <p><%=event.description %> </p>
-                </div>
-                <!-- <div class="card-action">
-                  <a href="/show/<%=event._id %> ">More Information</a>
-                  <div class="right-align">test</div>
-                </div> -->
-              </div>
-            <!-- </div>
-          </div> -->
-              
-          <!-- <div class="card">
-            <div class="card-image">
-              <a href="/show/<%=event._id%>">
-                <img src="<%=event.image %> ">
-              
-            </div>
-            <div class="card-content">
-              <span class="teal-text card-title"><%=event.name%> </span>
-              
-              <div class="black-text right-align light"><%=event.location%></div>
-              <div class="black-text right-align light">Date: <%=event.date %></div>
-              
-              <p class="black-text"><%=event.description %> </p>
-            </div></a>
-             <div class="card-action">
-              <a href="/show/<%=event._id %> ">More Information</a>
-              <div class="right-align">test</div>
-            </div> 
-          </div> -->
-    
-        <%}) %> 
-  
-
+      <div class="container">
+         <div class="row">      
+           <% events.forEach((event)=>{ %>
+             <div class="col s12 m4 l4">
+                 <div class="card large hoverable">
+                   <div class="card-image">
+                     <a href="/show/<%=event._id%>">
+                       <img class="" src="<%=event.image %> ">
+                     </a>
+                   </div>
+                   <div class="card-content">
+                     <span class="card-title"><%=event.name%> </span>
+                     
+                     <div class="right-align light"><%=event.location%></div>
+                     <div class="right-align light">Date: <%=event.date %></div>
+                     
+                     <p><%=event.description %> </p>
+                   </div>
+                   <!-- <div class="card-action">
+                     <a href="/show/<%=event._id %> ">More Information</a>
+                     <div class="right-align">test</div>
+                   </div> -->
+                 </div>
+               </div>
+           <%}) %> 
+       </div>
+      </div>
 
 </body>
 </html>

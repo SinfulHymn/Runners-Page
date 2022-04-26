@@ -60,6 +60,10 @@ footer.page-footer {
   max-height: 40px;
 }
 .responsive-img{
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: auto;
+}
+.test-test{
+  width: 100%;
+  height: auto;
 }
