@@ -20,13 +20,17 @@
     <a href="https://expressjs.com/">Express</a>
     ·
     <a href="https://www.mongodb.com/">MongoDB</a>
+    ·
+    <a href="https://www.passportjs.org/">Passport</a>
+    ·
+    <a href="https://oauth.net/2/">OAuth 2.0</a>
   </p>
 </div>
 
 # About
 Description            |  Screenshot
 :---:|:----:
-| <p align="left">- A cloud based web application that displays a directory of Running based Races/Events. <br> - Users will be able to explore Races/Events and view all their details about the Event! <br> - Users can leave a review on Races/Events they have participated in! <br>- Users are also encouraged to contribute by updating outdated Race/Event Data or adding new Race/Event's to the database as well. <br></p> | ![](https://i.imgur.com/CtaWKbU.png) | 
+| <p align="left">- A cloud based web application that displays a directory of Running based Races/Events. <br> - Users will be able to explore Races/Events and view all their details about the Event! <br> - Users can leave a review on Races/Events they have participated in! <br>- Users are also encouraged to contribute by updating outdated Race/Event Data or adding new Race/Event's to the database as well. <br></p> | ![](https://i.imgur.com/vUP0yK2.jpg) | 
 
 
 
@@ -137,6 +141,9 @@ const reviewSchema = new Schema({
 - Mongoose
 - Express
 - EJS
+- OAuth 2.0
+- Passport
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
