@@ -24,89 +24,98 @@
           </div>
 
 
-
-
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
-                  <input placeholder="Los Angeles Marathon" id="first_name" type="text" class="validate" name="name">
-                  <label for="event_name">Race Name</label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="" type="text" class="validate">
-                  <label for="last_name">Last Name</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                  <label for="disabled">Disabled</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">image</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s12">
-                  This is an inline input field:
-                  <div class="input-field inline">
-                    <input id="email_inline" type="email" class="validate">
-                    <label for="email_inline">Email</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+          <% if(user){ %>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input placeholder="Los Angeles Marathon" id="first_name" type="text" class="validate" name="name">
+                    <label for="event_name">Race Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
                   </div>
                 </div>
-              </div>
-            </form>
-          </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                    <label for="disabled">Disabled</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">image</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    This is an inline input field:
+                    <div class="input-field inline">
+                      <input id="email_inline" type="email" class="validate">
+                      <label for="email_inline">Email</label>
+                      <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+  
+            
+  <div class="form-field">
+    <form action="/" method="post">
+      <div>
+        <label for="name">name: </label>
+        <input type="text" name="name" id="" required>
+      </div>
+      <div>
+        <label for="description">Description: </label>
+        <textarea name="description" id="" cols="30" rows="5" required></textarea>
+      </div>
+      <div>
+        <label for="location">Location: </label>
+        <input type="text" name="location" id="" required>
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="text" name="date" required>
+      </div>
+      <div>
+        <label for="image">image:</label>
+        <input type="text" name="image" required>
+      </div>
+      <div>
+        <label for="source">Source:</label>
+        <input type="text" name="source" required>
+      </div>
+      <div>
+        <label for="signup">signup link: </label>
+        <input type="text" name="signup" required>
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input type="text" name="price" required>
+      </div>
+      <input type="submit" value="Add Event">
+    </form>
+  </div>
 
-          
-<div class="form-field">
-  <form action="/" method="post">
-    <div>
-      <label for="name">name: </label>
-      <input type="text" name="name" id="" required>
+         <% } else{ %>
+             <div class='main-cntr'>
+    <div class='pls-login'>
+      <a href="/auth/google">Login to Add Ice Cream</a>
     </div>
-    <div>
-      <label for="description">Description: </label>
-      <textarea name="description" id="" cols="30" rows="5" required></textarea>
-    </div>
-    <div>
-      <label for="location">Location: </label>
-      <input type="text" name="location" id="" required>
-    </div>
-    <div>
-      <label for="date">Date:</label>
-      <input type="text" name="date" required>
-    </div>
-    <div>
-      <label for="image">image:</label>
-      <input type="text" name="image" required>
-    </div>
-    <div>
-      <label for="source">Source:</label>
-      <input type="text" name="source" required>
-    </div>
-    <div>
-      <label for="signup">signup link: </label>
-      <input type="text" name="signup" required>
-    </div>
-    <div>
-      <label for="price">Price:</label>
-      <input type="text" name="price" required>
-    </div>
-    <input type="submit" value="Add Event">
-  </form>
-</div>
+  </div>
+        <% } %> 
+
+ 
     </main>
 </body>
 </html>
