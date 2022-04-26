@@ -4,6 +4,8 @@ require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 // fucking typos man...
+// the console is telling you something is wrong with express listen to the fucking console.
+// yes, the express was there but man look for typos
 const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");

@@ -3,6 +3,11 @@
     max-width: 100px;
     max-height: 100px;
 }
+#avatar-nav{
+    object-fit: cover;
+    max-width: 100px;
+    max-height: 100px;
+}
 #banner{
     /* max-width: 100%; */
     /* max-height: 100%; */

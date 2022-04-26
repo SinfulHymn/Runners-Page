@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include("./partials/head.ejs") %> 
+<body>
+    <main>
+        <%- include("./partials/header.ejs") %> 
+        <div id="index-banner" class="parallax-container">
+            <div class="section no-pad-bot">
+              <div class="container">
+                <br><br>
+                <h1 class="header center  cyan-text text-darken-3">Create a New Race Entry!</h1>
+                <div class="row center">
+                  <h5 class="header col s12  ">Contribute to our database</h5>
+                </div>
+                <div class="row center">
+                  <!-- <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a> -->
+                </div>
+                <br><br>
+        
+              </div>
+            </div>
+            <div class="parallax"><img id="banner" src="/images/banner5.jpg" alt="banner"></div>
+          </div>
+
+
+          
+<div class="form-field">
+  <form action="/" method="post">
+    <div>
+      <label for="name">name: </label>
+      <input type="text" name="name" id="" required>
+    </div>
+    <div>
+      <label for="description">Description: </label>
+      <textarea name="description" id="" cols="30" rows="5" required></textarea>
+    </div>
+    <div>
+      <label for="location">Location: </label>
+      <input type="text" name="location" id="" required>
+    </div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="text" name="date" required>
+    </div>
+    <div>
+      <label for="image">image:</label>
+      <input type="text" name="image" required>
+    </div>
+    <div>
+      <label for="source">Source:</label>
+      <input type="text" name="source" required>
+    </div>
+    <div>
+      <label for="signup">signup link: </label>
+      <input type="text" name="signup" required>
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input type="text" name="price" required>
+    </div>
+    <input type="submit" value="Add Event">
+  </form>
+</div>
+    </main>
+</body>
+</html>

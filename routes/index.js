@@ -4,11 +4,15 @@ const passport = require('passport')
 const indexAction = require("../controllers/index.js")
 
 // index 
-router.get("/", indexAction.index)
+router.get("/", indexAction.indexget)
 // seed
-router.get("/seed", indexAction.seed)
+router.get("/seed", indexAction.seedget)
 // new 
-router.get("/new",indexAction.new)
+router.get("/new",indexAction.newget)
+// show
+// router.get()
+
+
 
 // login route
 router.get("/auth/google", passport.authenticate('google',{

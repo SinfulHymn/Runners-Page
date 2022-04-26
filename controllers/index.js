@@ -4,8 +4,8 @@ const eventsSeed = require("../models/eventsSeed");
 
 const actions = {};
 
-
-actions.index = (req,res)=>{
+// get index
+actions.indexget = (req,res)=>{
     Event.find({}, (err,events)=>{
         res.render("index.ejs",{
             events,
@@ -13,8 +13,8 @@ actions.index = (req,res)=>{
         });
     });
 };
-
-actions.seed = (req,res)=>{
+// get seed
+actions.seedget = (req,res)=>{
     Event.deleteMany({},(err,events)=>{
         Event.create(eventsSeed,(err,data)=>{
             res.redirect("/");
@@ -22,9 +22,11 @@ actions.seed = (req,res)=>{
     });   
 };
 
-
-actions.new = (req,res)=>{
-    res.render("new.ejs");
+// get new
+actions.newget = (req,res)=>{
+    res.render("new.ejs",{
+        user: req.user
+    });
 }
 
 
