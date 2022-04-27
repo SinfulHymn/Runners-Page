@@ -31,7 +31,7 @@ const indexRouter = require("./routes/index.js");
 app.use(express.urlencoded({extended: true}));
 app.use('/static',express.static("public"));
 app.use(methodOverride("_method"));
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 // app.use(express.json());
 
 // !!!! this is cause the crash I don't know how.
