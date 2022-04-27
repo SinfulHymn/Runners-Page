@@ -2,7 +2,7 @@
 require("dotenv").config();
 // imports
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 // fucking typos man...
 // the console is telling you something is wrong with express listen to the fucking console.
 // yes, the express was there but man look for typos
