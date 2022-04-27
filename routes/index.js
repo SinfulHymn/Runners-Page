@@ -1,4 +1,5 @@
 const express = require("express");
+const { route } = require("express/lib/application");
 const router = express.Router()
 const passport = require('passport')
 const indexAction = require("../controllers/index.js")
@@ -22,6 +23,8 @@ router.get('/edit/:id',indexAction.editget)
 // update
 router.put('/show/:id',indexAction.updateput)
 
+
+// add review
 router.post("/review/:id",(req,res)=>{
     Event.findById(req.params.id, (err,event)=>{
         event.reviews.push(req.body);
@@ -34,6 +37,22 @@ router.post("/review/:id",(req,res)=>{
             res.redirect(`/show/${req.params.id}`)
         })
     })
+})
+
+// delete review
+router.delete("/review/:id",(req,res)=>{
+
+})
+
+//user get
+router.get("/user",(req,res)=>{
+    if(req.user){
+        User.findById(req.user._id).populate('reviewedEvents').exec((err,user)=>{
+            res.render('user.ejs',{
+                user
+            })
+        })
+    }
 })
 
 // login route

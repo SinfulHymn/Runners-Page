@@ -97,11 +97,19 @@
               <% if(reviewObj.review){%>
                 <div> 
                   <div>
-
                     <img class="circle" src="<%=reviewObj.reviewedBy.avatarURL%>" alt="">
                     <p><%=reviewObj.reviewedBy.name%></p>
+                    <p><%=reviewObj.reviewedBy._id%></p>
+                    <p><%=reviewObj.review%></p>
                   </div>
-                  <p><%=reviewObj.review %> </p>
+                  <!-- fuck why how to make delete button appear only on user i'd -->
+                  <form action="/review/<%=event._id%>?_method=DELETE" method="POST">
+                     <button class="red btn waves-effect waves-light" type="submit" name="action">DELETE
+                      <i class="material-icons right">send</i></button>
+                    <!-- <input class="delete-btn" type="submit" value="DELETE" /> -->
+                  </form>
+                  <br>
+                  
                   <div class="divider"></div>
                   <br>
                 </div>
