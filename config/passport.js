@@ -8,7 +8,7 @@ passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
     // heroku
-    callbackURL: process.env.GOOGLE_CALLBACK2
+    callbackURL: process.env.GOOGLE_CALLBACKS
     // local
     // callbackURL: process.env.GOOGLE_CALLBACK
 }, function (accessToken, refreshToken, profile, cb) {

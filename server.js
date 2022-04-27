@@ -34,7 +34,7 @@ app.use('/static',express.static("public"));
 app.use(methodOverride("_method"));
 // ~~~~~~~~~~~~~~~~~~~~~~remember to take off for heroku~~~~~~~~~~~~~~~~~~~~~~~~
 // app.use(morgan("dev"));
-// app.use(express.json());
+app.use(express.json());
 
 // !!!! this is cause the crash I don't know how.
 app.use(session({
