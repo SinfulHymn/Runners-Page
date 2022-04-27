@@ -33,10 +33,14 @@ actions.newget = (req,res)=>{
 // get show
 actions.showget = (req,res)=>{
     Event.findById(req.params.id, (err,event)=>{
-        res.render("show.ejs",{
-            event,
-            user:req.user
+        User.findById({}, (err,users)=>{
+            res.render("show.ejs",{
+                event,
+                user:req.user,
+                users: users
+            })
         })
+        
     })
 }
 // post create
