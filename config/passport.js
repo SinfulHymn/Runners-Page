@@ -7,7 +7,10 @@ const User = require("../models/user");
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK
+    // heroku
+    callbackURL: process.env.GOOGLE_CALLBACK2
+    // local
+    // callbackURL: process.env.GOOGLE_CALLBACK
 }, function (accessToken, refreshToken, profile, cb) {
     // user has attempted a login 
     //does this user already exist in our own database?
