@@ -41,7 +41,7 @@ actions.showget = (req,res)=>{
             })    
         })
         
-    })
+    }).populate("reviews.reviewedBy")
 }
 // post create
 actions.createpost = (req,res)=>{
