@@ -3,119 +3,92 @@
 <!-- head -->
 <%- include("./partials/head.ejs") %> 
 <body>
-    <main>
+
         <%- include("./partials/header.ejs") %> 
-        <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-              <div class="container">
-                <br><br>
-                <h1 class="header center  cyan-text text-darken-3">Create a New Race Entry!</h1>
-                <div class="row center">
-                  <h5 class="header col s12  ">Contribute to our database</h5>
-                </div>
-                <div class="row center">
-                  <!-- <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a> -->
-                </div>
-                <br><br>
-        
-              </div>
+        <br><br>
+  <div class="container">
+    <% if(user){ %>
+      <div class="row">
+        <form class="col s12" action="/" method="post">
+          <!-- race name -->
+          <div class="row">
+            <div class=" input-field col s6">
+              <input value="Maraton de la Ciudad de Mexico" id="race_name" type="text" name="name">
+              <label for="race_name">Race Name</label>
             </div>
-            <div class="parallax"><img id="banner" src="/static/images/banner5.jpg" alt="banner"></div>
+            <div class=" input-field col s6">
+              <input value="Mexico City, MX" id="race_location" type="text" name="location">
+              <label for="race_location">Race Location</label>
+            </div>
           </div>
-
-
-          <% if(user){ %>
-            <div class="row">
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s6">
-                    <input placeholder="Los Angeles Marathon" id="first_name" type="text" class="validate" name="name">
-                    <label for="event_name">Race Name</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <input id="" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                    <label for="disabled">Disabled</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">image</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col s12">
-                    This is an inline input field:
-                    <div class="input-field inline">
-                      <input id="email_inline" type="email" class="validate">
-                      <label for="email_inline">Email</label>
-                      <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                    </div>
-                  </div>
-                </div>
-              </form>
+          <div class="row">
+            <div class=" input-field col s6">
+              <input value="August 28, 2022" id="race_date" type="text" name="date">
+              <label for="race_date">Race Date</label>
             </div>
-  
-            
-  <div class="form-field">
-    <form action="/" method="post">
-      <div>
-        <label for="name">name: </label>
-        <input type="text" name="name" id="" required>
+            <div class=" input-field col s6">
+              <input value="90.00" id="race_price" type="text"  name="price">
+              <label for="race_price">Race Price in USD</label>
+            </div>
+          </div> 
+          <div class="row">
+            <div class=" input-field col s6">
+              <input value="19.332165584469546, -99.19143741142969" id="race_latlng" type="text"  name="latlng">
+              <label for="race_latlng">Race Location: lat,lng</label>
+            </div>
+            <div class=" input-field col s6">
+              <input value="Full" id="race_tags" type="text"  name="tags">
+              <label for="race_tags">Race Type: Tags ex: Full, Half, 10k, 5k</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class=" input-field col s12">
+              <input value="https://maraton.cdmx.gob.mx/" id="race_source" type="text"  name="source">
+              <label for="race_source">Marathon URL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class=" input-field col s12">
+              <input value="https://emociondeportiva.com/cus/4329/evento/4329#javascript:;" id="race_signup" type="text" name="signup">
+              <label for="race_signup">SIGNUP URL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class=" input-field col s12">
+              <input value="https://maraton.cdmx.gob.mx/public/galerias/2021/maraton_2021_24.jpg" id="race_image" type="text"  name="image">
+              <label for="race_image">Image URL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class=" input-field col s12">
+              <input value="https://maraton.cdmx.gob.mx/public/galerias/2021/maraton_2021_24.jpg" id="race_description" type="text"  name="description">
+              <label for="race_description">Description</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+    </button>
+        </form>
       </div>
-      <div>
-        <label for="description">Description: </label>
-        <textarea name="description" id="" cols="30" rows="5" required></textarea>
+
+      
+<div class="form-field">
+<form action="/" method="post">
+
+<input type="submit" value="Add Event">
+</form>
+</div>
+
+   <% } else{ %>
+      <div class="container">
+        <h1 class="center"><a href="/auth/google">Login to Add Race</a></h1>
+
       </div>
-      <div>
-        <label for="location">Location: </label>
-        <input type="text" name="location" id="" required>
-      </div>
-      <div>
-        <label for="date">Date:</label>
-        <input type="text" name="date" required>
-      </div>
-      <div>
-        <label for="image">image:</label>
-        <input type="text" name="image" required>
-      </div>
-      <div>
-        <label for="source">Source:</label>
-        <input type="text" name="source" required>
-      </div>
-      <div>
-        <label for="signup">signup link: </label>
-        <input type="text" name="signup" required>
-      </div>
-      <div>
-        <label for="price">Price:</label>
-        <input type="text" name="price" required>
-      </div>
-      <input type="submit" value="Add Event">
-    </form>
+  <% } %> 
   </div>
 
-         <% } else{ %>
-             <div class='main-cntr'>
-    <div class='pls-login'>
-      <a href="/auth/google">Login to Add Ice Cream</a>
-    </div>
-  </div>
-        <% } %> 
 
  
-    </main>
+
 </body>
 </html>
