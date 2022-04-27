@@ -6,17 +6,17 @@ const User = require("../models/user");
 // passport.use
 passport.use(new GoogleStrategy({
     // heroku
-    // clientID: process.env.GOOGLE_CLIENT_ID_HEROKU,
+    clientID: process.env.GOOGLE_CLIENT_ID_HEROKU,
     // local
-    clientID: process.env.GOOGLE_CLIENT_ID,
+    // clientID: process.env.GOOGLE_CLIENT_ID,
     // heroku
-    // clientSecret: process.env.GOOGLE_SECRET_HEROKU,
+    clientSecret: process.env.GOOGLE_SECRET_HEROKU,
     // local
-    clientSecret: process.env.GOOGLE_SECRET,
+    // clientSecret: process.env.GOOGLE_SECRET,
     // heroku
-    // callbackURL: process.env.GOOGLE_CALLBACK_HEROKU
+    callbackURL: process.env.GOOGLE_CALLBACK_HEROKU
     // local
-    callbackURL: process.env.GOOGLE_CALLBACK
+    // callbackURL: process.env.GOOGLE_CALLBACK
 }, function (accessToken, refreshToken, profile, cb) {
     // user has attempted a login 
     //does this user already exist in our own database?
