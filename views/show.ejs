@@ -26,7 +26,7 @@
           <!-- data in container -->
             <img class="test-test z-depth-5" src="<%=event.image %> " alt="">
             <br>
-            <h3>Join the <%=event.name%></h3>
+            <h3><blockquote>Join the <%=event.name%></blockquote></h3>
             <div  class="row">
               <div class="col s12 m8 l8">
                 <blockquote>
@@ -82,12 +82,25 @@
           <% } %> 
         </div>
        </div>
-       <h3 id="location">Location</h3>
-       <div id="map"></div>
-       <h3 id="reviews">Reviews</h3>
-        <div class="container">
-          asdfdsf
-        </div>
+       <!-- map -->
+       <h3 id="location"><blockquote>Location</blockquote> </h3>
+       <div class="z-depth-5" id="map"></div>
+       <!-- map -->
+
+       <!-- reviews -->
+       <h3 id="reviews"><blockquote>Reviews</blockquote></h3>
+        
+          <div class="row">
+            <div class="col s12">
+              <!-- loop create cards -->
+
+              <div class="card z-depth-5">
+                test
+              </div>
+              <!-- loop end -->
+            </div>
+          </div>
+        
 
        
        <br>
@@ -110,6 +123,8 @@
   
       }
   
-        </script> 
+    </script> 
+
+<%- include("./partials/footer.ejs") %> 
 </body>
 </html>

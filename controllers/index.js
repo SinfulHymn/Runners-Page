@@ -1,6 +1,7 @@
 // import schema model
 const Event = require("../models/events");
 const eventsSeed = require("../models/eventsSeed");
+const User= require('../models/user')
 
 const actions = {};
 

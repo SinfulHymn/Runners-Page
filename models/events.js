@@ -4,13 +4,9 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const latlngSchema = new Schema([{
-    lat: String,
-    lng: String
-}])
 
 const reviewSchema = new Schema({
-    content: String,
+    review: String,
     rating: {
         type: Number, 
         min: 1,
