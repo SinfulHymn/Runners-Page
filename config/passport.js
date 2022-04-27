@@ -21,7 +21,7 @@ passport.use(new GoogleStrategy({
     // user has attempted a login 
     //does this user already exist in our own database?
     // check
-    User.findOne({'googleID': profile.id},function(err, user){
+    User.findOne({'googleId': profile.id},function(err, user){
         // if they don't we create 
         // check for and handle errors
         if(err) return cb(err);
