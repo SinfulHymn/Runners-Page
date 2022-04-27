@@ -9,7 +9,7 @@ const morgan = require("morgan");
 const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
-const PORT = process.env.PORT || "3060";
+const PORT = process.env.PORT || 3002 ;
 
 // express app
 const app = express();
