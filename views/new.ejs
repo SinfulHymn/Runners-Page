@@ -5,8 +5,9 @@
 <body>
 
         <%- include("./partials/header.ejs") %> 
-        <br><br>
+        
   <div class="container">
+    <h1 class="teal-text">Create an Event</h1>
     <% if(user){ %>
       <div class="row">
         <form class="col s12" action="/" method="post">
@@ -71,13 +72,6 @@
         </form>
       </div>
 
-      
-<div class="form-field">
-<form action="/" method="post">
-
-<input type="submit" value="Add Event">
-</form>
-</div>
 
    <% } else{ %>
       <div class="container">

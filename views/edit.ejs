@@ -3,10 +3,81 @@
 <!-- head -->
 <%- include("./partials/head.ejs") %> 
 <body>
-    <main>
+    
         <%- include("./partials/header.ejs") %> 
 
-
-    </main>
+        <div class="container">
+          <h1 class="teal-text">Update <%=event.name %> </h1>
+          <% if(user){ %>
+            <div class="row">
+              <form class="col s12" action="/show/<%=event._id%>?_method=PUT" method="post">
+                <!-- race name -->
+                <div class="row">
+                  <div class=" input-field col s6">
+                    <input value="<%=event.name%>" id="race_name" type="text" name="name">
+                    <label for="race_name">Race Name</label>
+                  </div>
+                  <div class=" input-field col s6">
+                    <input value="<%=event.location %> " id="race_location" type="text" name="location">
+                    <label for="race_location">Race Location</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" input-field col s6">
+                    <input value="<%=event.date%>" id="race_date" type="text" name="date">
+                    <label for="race_date">Race Date</label>
+                  </div>
+                  <div class=" input-field col s6">
+                    <input value="<%=event.price %> " id="race_price" type="text"  name="price">
+                    <label for="race_price">Race Price in USD</label>
+                  </div>
+                </div> 
+                <div class="row">
+                  <div class=" input-field col s6">
+                    <input value="<%=event.latlng[0]%>,<%=event.latlng[1]%> " id="race_latlng" type="text"  name="latlng">
+                    <label for="race_latlng">Race Location: lat,lng</label>
+                  </div>
+                  <div class=" input-field col s6">
+                    <input value="<% event.tags.forEach((tag) =>{ %><%=tag%>, <%})%>"id="race_tags" type="text"  name="tags"> 
+                    <label for="race_tags">Race Type: Tags ex: Full, Half, 10k, 5k</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" input-field col s12">
+                    <input value="<%=event.source%>" id="race_source" type="text"  name="source">
+                    <label for="race_source">Marathon URL</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" input-field col s12">
+                    <input value="<%=event.signup%>" id="race_signup" type="text" name="signup">
+                    <label for="race_signup">SIGNUP URL</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" input-field col s12">
+                    <input value="<%=event.image%>" id="race_image" type="text"  name="image">
+                    <label for="race_image">Image URL</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" input-field col s12">
+                    <input value="<%=event.description%>" id="race_description" type="text"  name="description">
+                    <label for="race_description">Description</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+          </button>
+              </form>
+            </div>
+      
+      
+         <% } else{ %>
+            <div class="container">
+              <h1 class="center"><a href="/auth/google">Login to Update Race</a></h1>
+      
+            </div>
+        <% } %> 
 </body>
 </html>

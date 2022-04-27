@@ -18,6 +18,8 @@ router.post("/",indexAction.createpost)
 router.delete('/show/:id',indexAction.delete)
 // edit
 router.get('/edit/:id',indexAction.editget)
+// update
+router.put('/show/:id',indexAction.updateput)
 
 // login route
 router.get("/auth/google", passport.authenticate('google',{

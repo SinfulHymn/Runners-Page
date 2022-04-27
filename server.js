@@ -2,7 +2,8 @@
 require("dotenv").config();
 // imports
 const express = require("express");
-// const morgan = require("morgan");
+// ~~~~~~~~~~~~~~~~~~~~~~remember to take off for heroku~~~~~~~~~~~~~~~~~~~~~~~~
+const morgan = require("morgan");
 // fucking typos man...
 // the console is telling you something is wrong with express listen to the fucking console.
 // yes, the express was there but man look for typos
@@ -31,7 +32,8 @@ const indexRouter = require("./routes/index.js");
 app.use(express.urlencoded({extended: true}));
 app.use('/static',express.static("public"));
 app.use(methodOverride("_method"));
-// app.use(morgan("dev"));
+// ~~~~~~~~~~~~~~~~~~~~~~remember to take off for heroku~~~~~~~~~~~~~~~~~~~~~~~~
+app.use(morgan("dev"));
 // app.use(express.json());
 
 // !!!! this is cause the crash I don't know how.

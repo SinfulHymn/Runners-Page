@@ -55,7 +55,7 @@ actions.delete = (req,res)=>{
 }
 
 // edit get
-actions.editget =(req,res)=>{
+actions.editget = (req,res)=>{
     Event.findById(req.params.id,(err,event)=>{
         res.render("edit.ejs",{
             event,
@@ -63,6 +63,15 @@ actions.editget =(req,res)=>{
         })
     })
 } 
+
+// update put
+actions.updateput = (req,res)=>{
+    Event.findByIdAndUpdate(req.params.id, req.body,(err,updatedEvent)=>{
+        if(err) console.log(err)
+        res.redirect(`/show/${req.params.id}`)
+    })
+}
+
 
 
 module.exports = actions
