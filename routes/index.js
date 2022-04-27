@@ -3,6 +3,7 @@ const router = express.Router()
 const passport = require('passport')
 const indexAction = require("../controllers/index.js")
 const Event = require("../models/events");
+const User = require("../models/user")
 
 // index 
 router.get("/", indexAction.indexget);
@@ -20,6 +21,20 @@ router.delete('/show/:id',indexAction.delete)
 router.get('/edit/:id',indexAction.editget)
 // update
 router.put('/show/:id',indexAction.updateput)
+
+router.post("/review/:id",(req,res)=>{
+    Event.findById(req.params.id, (err,event)=>{
+        event.reviews.push(req.body);
+        User.findById(req.user, (err,user)=>{
+            user.reviewedEvents.push(req.params.id);
+            user.save((err)=>console.log(err))
+        })
+        event.save((err)=>{
+            console.log(err)
+            res.redirect(`/show/${req.params.id}`)
+        })
+    })
+})
 
 // login route
 router.get("/auth/google", passport.authenticate('google',{

@@ -33,12 +33,12 @@ actions.newget = (req,res)=>{
 // get show
 actions.showget = (req,res)=>{
     Event.findById(req.params.id, (err,event)=>{
-        User.findById({}, (err,users)=>{
+        User.find({}, (err,users)=>{
             res.render("show.ejs",{
+                users,
                 event,
                 user:req.user,
-                users: users
-            })
+            })    
         })
         
     })
