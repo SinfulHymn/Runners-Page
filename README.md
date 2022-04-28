@@ -40,64 +40,105 @@ Description            |  Screenshot
 
 # Functionality
 - In this app we will access a database of race events and display them on the index page
-
-- On the index page we have four functionalities
-    - Be able to use the Navigation link to sort events by type
-    - User will be able to sign up or log in and then be granted access to
+- User will Be able to view a directory of races and browse any for full information
+- User will be able to sign up or log in
+- if user is logged in they can
+        
         - create a new race event 
-        - add reviews to races events
-        - update race event data and update database
+        - update race event data 
+        - delete race event data
+        - add reviews to race event data
+        - delete reviews to race event data
 
-# Intended Routes
+- if user is logged in they can view a list of their reviewed race events 
+
+
+# Routes
 ```
+- get '/auth/google' --> allows user to sign in with their google account to acess features on page
+
+- get '/' --> renders index page and passess through events and user variables, displays db items
+
+- get '/seed' -->  deletes all entries in mongodb and creates a news entries with seed data
+
+- get '/new' --> renders new page and allows user to create a new entry in the db
+
+- get '/show/:id' --> renders show page and passes through users, event, and currently logged, as well as reference to other schemas in user variables, allow user to see db entry in full allow
+
+- get '/edit/:id' --> will render edit page based on the id of the entry in db, passes through event data and logged user variables
+
+- post '/' --> will push new data to db and redirect back to index page
+
+- delete '/show/:id' --> will delete db entry based on id of the db entry
+
+- put '/show/:id' --> will update db entry based on id  of the db entry
+
+- post '/review/:id' --> pushes review schema into event and user redirects to show page 
+
+- delete '/review/:id' --> deletes review from user and event
 
 ```
 
 # Models/Schema 
 ### subject to change
+
+Event/Review Schema:
 ```
-Race/Event Schema:
-const raceSchema = new Schema({
-    name: { type: String, required: true, unique:true},
-    description: { type: String, required: false},
-    image: { type: String, required: true},
-    price: { type: String, required: false},
-    location: { type: String, required: false},
-    type: { type: String, required: true },
-    urlSource: { type: String, required: true}
+const reviewSchema = new Schema({
+    review: String,
+    rating: Number,
+    reviewedBy:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
+},{
+    timestamps: true
+})
+
+//schema
+const eventsSchema = new Schema({
+    name: {type: String, unique:true, required: true},
+    description: {type: String, required: true},
+    location: {type: String, required: true},
+    date: {type: String, required: true},
+    image: {type: String, required: true},
+    source: {type: String, required: true},
+    signup: {type: String, required: true},
+    price: {type: String, required: true},
+    latlng: [],
+    tags:[],
+    reviews: [reviewSchema]
 })
 ```
 User Schema:
 ```
 const userSchema = new Schema({
-    username: { type: String, required: true, unique:true},
-    password: {type: String, required: true }
-})
-```
-Review Schema:
-```
-const reviewSchema = new Schema({
-    content: { type: String, required: true},
-    rating: { type: number, required: true}
-})
+    name: String,
+    email: String,
+    avatarURL: String,
+    googleId: String,
+    reviewedEvents: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Event'
+    }]
+});
 ```
 
 # Current State
 
-<!-- - To do this we will be utilizing the strava api app to get user activity data 
-    
-- hardships of api oauth2 authentication code and authorizations, tokens and token refresh
-    - I have to generate authorization code from an oauth2 authorization page
+- User is currently able to visit the site and see a directory of race
+
+- user is able to log in through google strategy OAuth
+
+- user is able to click on any of the races displayed to view full information
+
+- if user is logged in they will have access to be able to delete or edit a race as well as create a new race 
+
+- if user is logged in on the race they are viewing they are able to add a comment
+
+- user will be able to see their comments added to the race they commented on
 
 
-- With the authorization page we mimic as if we were logging into an app that will use our authorization login 
-
-- Once this authorization is done, users will be able to see activities with map data and a poly line of the specific data
-
-- user will be able to see their average data points and highest data point
-    - avg hr, avg pace, avg run, best miles, longest milage, 
-
-- Atheletes need an easy to access website to view their atheletic activities across different plateforms and their visualization. -->
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -106,14 +147,14 @@ const reviewSchema = new Schema({
 
 # Roadmap and future Implementations
 
-<!-- - add authorization page so the user could import their peronal data on to the page
-- add poly line to all user activities
-- Create a roadmap of all the miles onto the map.
-    - When user hovers/clicks a mile or activity it will highlight and zoom onto location on map
-- add more data points from different apps
-- change user interface.
-- In progress: users will be able to login and authorize strava to allow me to use and propagated their own use data
-- add more map styling and interactiveness -->
+- allow users to only edit and delete their comments
+
+- allow users to view a list of their comments and the races they have reviews in one centralized page
+
+- allow users to sort events by tags
+
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # User Story
@@ -143,7 +184,7 @@ const reviewSchema = new Schema({
 - EJS
 - OAuth 2.0
 - Passport
-
+- 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -168,8 +209,8 @@ Show/Description             |  ERD
 
 
 # Resources/Links
-- https://developers.strava.com/
+<!-- - https://developers.strava.com/
 - https://developers.strava.com/docs/getting-started/
 - https://leafletjs.com/SlavaUkraini/reference.html
-- https://www.strava.com/oauth/authorize?client_id=80013&redirect_uri=http://localhost&response_type=code&scope=activity:read_all
+- https://www.strava.com/oauth/authorize?client_id=80013&redirect_uri=http://localhost&response_type=code&scope=activity:read_all -->
 <p align="right">(<a href="#top">back to top</a>)</p>
