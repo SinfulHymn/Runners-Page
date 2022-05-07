@@ -40,8 +40,36 @@ router.post("/review/:id",(req,res)=>{
 })
 
 // delete review
-router.delete("/review/:id",(req,res)=>{
+router.delete("/review/:eventid/:reviewid/",(req,res)=>{
 
+        console.log( JSON.stringify(req.user._id))
+        User.findById(req.user._id, (err,user)=>{
+            console.log(req.params.reviewid)
+        }).populate('reviewedEvents')
+
+        Event.findById(req.params.eventid,(err,event)=>{
+        //    console.log(event.reviews.reviewedBy)
+            event.reviews.forEach((review)=>{
+                if(req.params.reviewid == review.id){
+
+                    console.log(review._id)
+                }
+
+            })
+        }).populate('reviews.reviewedBy')
+
+        // Event.findOne({"reviews.reviewedBy": req.user },(err,result)=>{
+        //     if(err){
+        //         res.send(err)
+        //     } else{
+        //         console.log(result)
+        //     }
+        // })
+
+
+
+
+        // Event.reviews
 })
 
 //user get
