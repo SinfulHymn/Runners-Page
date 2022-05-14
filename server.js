@@ -3,10 +3,7 @@ require("dotenv").config();
 // imports
 const express = require("express");
 // ~~~~~~~~~~~~~~~~~~~~~~remember to take off for heroku~~~~~~~~~~~~~~~~~~~~~~~~
-// const morgan = require("morgan");
-// fucking typos man...
-// the console is telling you something is wrong with express listen to the fucking console.
-// yes, the express was there but man look for typos
+const morgan = require("morgan");
 const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
@@ -33,7 +30,7 @@ app.use(express.urlencoded({extended: true}));
 app.use('/static',express.static("public"));
 app.use(methodOverride("_method"));
 // ~~~~~~~~~~~~~~~~~~~~~~remember to take off for heroku~~~~~~~~~~~~~~~~~~~~~~~~
-// app.use(morgan("dev"));
+app.use(morgan("dev"));
 app.use(express.json());
 
 // !!!! this is cause the crash I don't know how.
@@ -44,8 +41,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-// add passport middleware here
 
 
 

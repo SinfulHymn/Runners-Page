@@ -34,42 +34,36 @@ router.post("/review/:id",(req,res)=>{
         })
         event.save((err)=>{
             console.log(err)
-            res.redirect(`/show/${req.params.id}`)
+            res.redirect(`/show/${req.params.id}#reviews`)
         })
     })
 })
 
 // delete review
 router.delete("/review/:eventid/:reviewid/",(req,res)=>{
-
-        console.log( JSON.stringify(req.user._id))
-        User.findById(req.user._id, (err,user)=>{
-            console.log(req.params.reviewid)
-        }).populate('reviewedEvents')
-
+        //if the id of the review from params = to the id of the array from find then splic the array from the array 
+        // console.log("eventid:  ", req.params.eventid)
+        console.log(req.params.reviewid.toString(), " :id of the review" )
+        // we get the single id of the event 
         Event.findById(req.params.eventid,(err,event)=>{
-        //    console.log(event.reviews.reviewedBy)
-            event.reviews.forEach((review)=>{
-                if(req.params.reviewid == review.id){
+            //console.log("event inside findbyid: ", event.reviews)
+           // iterate through the reviews array in the Event
 
-                    console.log(review._id)
+
+           console.log(event.reviews[0]._id.toString())
+            event.reviews.forEach((review, index, array)=>{
+                // if id event id from params = to the id of the review in the array splice the review from the array
+                if(req.params.reviewid== review._id.toString()){
+                    array.splice(index,1)
                 }
-
             })
-        }).populate('reviews.reviewedBy')
+            event.save((err)=>{
+               if(err) console.log("this is err:", err)
+                res.redirect(`/show/${req.params.eventid}#reviews`)
+            })
+        })
+        // .populate('reviews.reviewedBy')
 
-        // Event.findOne({"reviews.reviewedBy": req.user },(err,result)=>{
-        //     if(err){
-        //         res.send(err)
-        //     } else{
-        //         console.log(result)
-        //     }
-        // })
-
-
-
-
-        // Event.reviews
 })
 
 //user get
