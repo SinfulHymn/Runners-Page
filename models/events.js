@@ -7,18 +7,11 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
     review: String,
-    rating: {
-        type: Number, 
-        min: 1,
-        max: 5,
-        default: 5,
-        required: true,
-    },
+    rating: Number,
     reviewedBy:{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }
-
 },{
     timestamps: true
 })

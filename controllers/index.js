@@ -33,11 +33,15 @@ actions.newget = (req,res)=>{
 // get show
 actions.showget = (req,res)=>{
     Event.findById(req.params.id, (err,event)=>{
-        res.render("show.ejs",{
-            event,
-            user:req.user
+        User.find({}, (err,users)=>{
+            res.render("show.ejs",{
+                users,
+                event,
+                user:req.user,
+            })    
         })
-    })
+        
+    }).populate("reviews.reviewedBy")
 }
 // post create
 actions.createpost = (req,res)=>{
