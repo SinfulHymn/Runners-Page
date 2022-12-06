@@ -1,13 +1,13 @@
 // read env variables
 require("dotenv").config();
-// imports
 const express = require("express");
-// ~~~~~~~~~~~~~~~~~~~~~~remember to take off for heroku~~~~~~~~~~~~~~~~~~~~~~~~
-// const morgan = require("morgan");
+// import morgan from "morgan";
 const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
-const PORT = process.env.PORT || 3002 ;
+
+let PORT = 3012
+// Check if the specified port is available
 
 // express app
 const app = express();
@@ -48,5 +48,11 @@ app.use(passport.session());
 app.use('/',indexRouter);
 
 
+
+// app listener  but change port if already in use
+
 // listener
-app.listen(PORT, ()=> console.log(`We are listening on ${PORT}`))
+app.listen(PORT, () => {
+    console.log(`Express is listening on port:${PORT}`);
+}
+);

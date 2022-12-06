@@ -5,16 +5,10 @@ const User = require("../models/user");
 
 // passport.use
 passport.use(new GoogleStrategy({
-    // heroku
-    clientID: process.env.GOOGLE_CLIENT_ID_HEROKU,
-    // local
-    // clientID: process.env.GOOGLE_CLIENT_ID,
-    // heroku
-    clientSecret: process.env.GOOGLE_SECRET_HEROKU,
-    // local
-    // clientSecret: process.env.GOOGLE_SECRET,
-    // heroku
-    callbackURL: process.env.GOOGLE_CALLBACK_HEROKU
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_SECRET,
+
+    callbackURL: process.env.GOOGLE_CALLBACK
     // local
     // callbackURL: process.env.GOOGLE_CALLBACK
 }, function (accessToken, refreshToken, profile, cb) {
