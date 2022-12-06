@@ -8,6 +8,8 @@ const actions = {};
 // get index
 actions.indexget = (req,res)=>{
     Event.find({}, (err,events)=>{
+        res.setHeader('Content-Type', 'text/html');
+        res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
         res.render("index.ejs",{
             events,
             user: req.user
