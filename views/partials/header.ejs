@@ -1,52 +1,81 @@
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-          <a id="logo-container" href="/" class="brand-logo"><img id="nav-logo" src="/static/images/logo.png" alt=""></a>
-        
-          <ul class="right hide-on-med-and-down">
-            <li><a href="/">Home</a></li>
-            <li><a href="https://github.com/Kmachappy/Runners-Page">GitHub</a></li>
-            <li><a href="http://kmachappy.me/">About</a></li>
-            <!-- if statement for user links -->
-                <% if(user){ %>
-                    <li ><a href="/user"><img class="circle responsive-img" src="" alt="<%= user.name%>"> My Reviews</a></li>
-                    <li><a href="/new"><span>Add New Race</span></a></li>
-                    <li><a href="/logout"><span>Log Out</span></a></li>
-                <% } else { %> 
-                <li><a href="/auth/google"><i class=" material-icons left">vpn_key</i>Log in With Google</a></li>
-                <% } %> 
-          </ul>
-    
-          <ul id="nav-mobile" class="sidenav">
-            <li><a href="/">Home</a></li>
-            <li><a href="https://github.com/Kmachappy/Runners-Page">GitHub</a></li>
-            <li><a href="http://kmachappy.me/">About</a></li>
-            <% if(user){ %>
-                <li><a href="/user"><img src="<%=user.avatarURL%>" alt="<%=user.name%>"><span> Reviews</span></a></li>
-                <li><a href="/new"><span>Add New Race</span></a></li>
-                <li><a href="/logout"><span>Log Out</span></a></li>
-            <% } else { %> 
-            <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Log in With Google</a></li>
-            <% } %>
-          </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+<nav class="white" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="/" class="brand-logo"
+      ><img id="nav-logo" src="/static/images/logo.png" alt=""
+    /></a>
 
-    
-    <div id="index-banner" class="parallax-container">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <br><br>
-          <h1 class="header center teal-text text-lighten-2">Runners Page</h1>
-          <div class="row center">
-            <h5 class="header col s12 light ">A directory of Running Races</h5>
-          </div>
-          <div class="row center">
-            <!-- <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a> -->
-          </div>
-          <br><br>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/Kmachappy/Runners-Page">GitHub</a></li>
+      <li><a href="http://kmachappy.me/">About</a></li>
+      <!-- if statement for user links -->
+      <% if(user){ %>
+      <li>
+        <a href="/user"
+          ><img class="circle responsive-img" src="" alt="<%= user.name%>" /> My
+          Reviews</a
+        >
+      </li>
+      <li>
+        <a href="/new"><span>Add New Race</span></a>
+      </li>
+      <li>
+        <a href="/logout"><span>Log Out</span></a>
+      </li>
+      <% } else { %>
+      <li>
+        <a href="/auth/google"
+          ><i class="material-icons left">vpn_key</i>Log in With Google</a
+        >
+      </li>
+      <% } %>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/Kmachappy/Runners-Page">GitHub</a></li>
+      <li><a href="http://kmachappy.me/">About</a></li>
+      <% if(user){ %>
+      <li>
+        <a href="/user"
+          ><img src="<%=user.avatarURL%>" alt="<%=user.name%>" /><span>
+            Reviews</span
+          ></a
+        >
+      </li>
+      <li>
+        <a href="/new"><span>Add New Race</span></a>
+      </li>
+      <li>
+        <a href="/logout"><span>Log Out</span></a>
+      </li>
+      <% } else { %>
+      <li>
+        <a href="/auth/google"
+          ><i class="material-icons left">vpn_key</i>Log in With Google</a
+        >
+      </li>
+      <% } %>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+      ><i class="material-icons">menu</i></a
+    >
+  </div>
+</nav>
+
+<div id="index-banner" class="parallax-container  ">
   
-        </div>
+    <div class="container center-align cborder">
+      <div class="text-back">
+      <h1 class="header center teal-text text-lighten-2 banner-title">Runners Page</h1>
+      <div class="row center">
+        <h5 class="header col s12 medium banner-title">A directory of Running Races</h5>
       </div>
-      <div class="parallax"><img id="banner" src="/static/images/banner5.jpg" alt="banner"></div>
     </div>
+    </div>
+  
+  <div class="parallax">
+    <img id="banner" src="/static/images/banner5.jpg" alt="banner" />
+  </div>
+
+</div>

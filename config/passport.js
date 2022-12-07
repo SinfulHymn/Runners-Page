@@ -7,14 +7,9 @@ const User = require("../models/user");
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-
     callbackURL: process.env.GOOGLE_CALLBACK
-    // local
-    // callbackURL: process.env.GOOGLE_CALLBACK
 }, function (accessToken, refreshToken, profile, cb) {
-    // user has attempted a login 
-    //does this user already exist in our own database?
-    // check
+
     User.findOne({'googleId': profile.id},function(err, user){
         // if they don't we create 
         // check for and handle errors

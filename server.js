@@ -6,7 +6,7 @@ const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
 
-let PORT = 3012
+let PORT = 3000
 // Check if the specified port is available
 
 // express app
